@@ -1,15 +1,14 @@
 const slickSliders = document.querySelectorAll(".slickSlider");
 if (slickSliders) {
   const slickSettings = {
-    companies: {
-      slidesToShow: 6,
-      infinite: true,
-      autoplay: true,
-      speed: 1500,
-      centerMode: true,
-      focusOnSelect: true,
+    products: {
+      slidesToShow: 4.2,
+      speed: 500,
+      centerMode: false,
       arrows: false,
       dots: false,
+      infinite: false,
+      focusOnSelect: true,
       responsive: [
         {
           breakpoint: 1025,
@@ -55,9 +54,10 @@ if (slickSliders) {
         },
       ],
     },
-    default: {
-      slidesToShow: 3,
+    reviews: {
+      slidesToShow: 3.2,
       speed: 600,
+      autoplay: false,
       arrows: true,
       dots: false,
       infinite: false,
@@ -106,32 +106,20 @@ if (slickSliders) {
         },
       ],
     },
-    feedbacksImages: {
-      slidesToShow: 1,
-      speed: 300,
-      arrows: false,
-      dots: false,
-      fade: true,
-      cssEase: "ease-out",
-      asNavFor: "#feedbacksContent",
-    },
-
-    feedbacksContent: {
-      slidesToShow: 1,
-      speed: 0,
-      arrows: false,
-      dots: true,
-      appendDots: $("#feedbacksContentDots"),
-      fade: true,
-      cssEase: "linear",
-      asNavFor: "#feedbacksImages",
-    },
   };
   const getSlickSettings = (settings) => {
     return slickSettings[settings] ?? {};
   };
   slickSliders.forEach((slider) => {
     const settings = slider.getAttribute("data-slick") ?? null;
-    $(slider).slick(getSlickSettings(settings));
+    const nextArrow = slider.parentElement.querySelector(".nextArrow") ?? null;
+    const prevArrow = slider.parentElement.querySelector(".prevArrow") ?? null;
+
+    $(slider).slick({
+      ...getSlickSettings(settings),
+      arrows: !!(nextArrow || prevArrow),
+      nextArrow,
+      prevArrow,
+    });
   });
 }

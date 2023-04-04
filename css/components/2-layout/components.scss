@@ -187,25 +187,99 @@
     opacity: 0.5 !important;
   }
 }
-// .ratioImage {
-//   position: relative;
-//   padding-bottom: 65%;
-//   width: 100%;
+.ratioImage {
+  position: relative;
+  padding-bottom: 65%;
+  width: 100%;
 
-//   img {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-//   &--contain {
-//     img {
-//       object-fit: contain;
-//     }
-//   }
-// }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.sliderArrow {
+  position: relative;
+  font-size: 15px;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background: rgba($black, 0.02);
+  transition: 0.3s ease-out;
+
+  &.slick-disabled {
+    visibility: hidden;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+  }
+  &:before {
+    width: 0.6em;
+    height: 0.6em;
+    transition: 0.3s ease-out;
+  }
+  &:after {
+    width: 8em;
+    height: 2px;
+    background-color: $white-main;
+    transition: 0.3s ease-out;
+  }
+  &.prevArrow {
+    &:before {
+      border-bottom: 2px solid $white-main;
+      border-left: 2px solid $white-main;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-0.5em, -50%);
+    }
+  }
+
+  &.nextArrow {
+    &:before {
+      border-top: 2px solid $white-main;
+      border-right: 2px solid $white-main;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(calc(-100% + 0.5em), -50%);
+    }
+  }
+
+  &:hover {
+    background: rgba($black, 0.04);
+    &:before {
+      width: 0.8em;
+      height: 0.8em;
+    }
+    &:after {
+      width: 7em;
+    }
+  }
+  &:active {
+    background: rgba($black, 0.05);
+    &:before {
+      width: 0.7em;
+      height: 0.7em;
+    }
+  }
+}
 // .badge {
 //   background: $secondary-light;
 //   border-radius: 100px;
