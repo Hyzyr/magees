@@ -156,7 +156,7 @@
   font-size: 10px;
   width: 2.6em;
   height: 2em;
-  color: $white;
+  color: $black;
   background: transparent;
   transition: 0.2s ease;
 
@@ -168,7 +168,6 @@
     width: 100%;
     height: 0.32em;
     background-color: currentColor;
-    border-radius: 0.4em;
     transition: all 0.3s ease;
   }
   span {
@@ -191,7 +190,7 @@
   }
 
   &.active {
-    color: $main;
+    color: $white-bg;
 
     &::before {
       top: 50%;
@@ -262,10 +261,8 @@
       padding: 25px 0;
       justify-content: space-between;
 
-      &-logo {
-        padding-right: 20px;
-        border-right: 2px solid rgba($white, 0.27);
-        border: 0;
+      .logo {
+        width: 120px;
       }
       .burger {
         display: block;
@@ -275,6 +272,12 @@
 
     &.sticky {
       z-index: 1;
+      .header__inner {
+        height: unset;
+        .logo {
+          width: 100px;
+        }
+      }
     }
   }
   .nav {
@@ -373,7 +376,27 @@
       padding: 20px 0;
 
       .logo {
-        width: 130px;
+        width: 110px;
+      }
+    }
+  }
+}
+
+@mixin header-580 {
+  .header {
+    &__inner {
+      height: 80px;
+      padding: 20px 0 15px 0;
+
+      .logo {
+        width: 100px;
+      }
+    }
+    &.sticky {
+      .header__inner {
+        .logo {
+          width: 80px;
+        }
       }
     }
   }

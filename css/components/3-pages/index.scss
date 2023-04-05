@@ -275,25 +275,10 @@
       }
     }
   }
-}
-
-@mixin index-1025 {
-  .hero {
-    display: block;
+  .subscribe {
     &__inner {
-      &-content {
-        position: relative;
-        height: 60vh;
-
-        &-image {
-          left: 30%;
-          width: 50%;
-        }
-      }
-      &:after {
-        left: 30%;
-        width: 70%;
-      }
+      height: unset;
+      padding: 60px 0;
     }
   }
 }
@@ -306,7 +291,10 @@
     &__inner {
       &-header {
         position: relative;
+        height: 130px;
         width: 100%;
+        border-top: 1px solid rgba($white-bg, 0.4);
+
         &:after {
           position: absolute;
           content: "";
@@ -361,6 +349,28 @@
       }
       &:after {
         display: none;
+      }
+    }
+  }
+  .subscribe {
+    &__inner {
+      &-form {
+        &-row {
+          flex-direction: column;
+          width: 90%;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+@mixin index-580 {
+  .hero {
+    margin-top: 78px;
+    &__inner {
+      &-header {
+        height: 110px;
       }
     }
   }
