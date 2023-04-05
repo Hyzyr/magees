@@ -36,40 +36,13 @@
     border-bottom: 1px solid rgba($main, 0.2);
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
+
     .header__inner {
       padding: 15px 0;
       min-height: unset;
+
       .logo {
         width: 130px;
-      }
-
-      .nav__inner {
-        &-links {
-          position: unset;
-          flex-direction: row;
-          align-items: center;
-
-          h6 {
-            margin: 0 20px 0 0;
-          }
-        }
-        &-link {
-          &:after {
-            top: calc(100% + 0.5em);
-            left: 50%;
-            transform: translateX(-50%);
-            height: 2px;
-            width: 40%;
-          }
-
-          &:hover {
-            color: $main;
-            &:after {
-              width: 80%;
-              opacity: 1;
-            }
-          }
-        }
       }
     }
   }
@@ -236,11 +209,57 @@
   }
 }
 
+@mixin header-min-1025 {
+  .header {
+    &.sticky {
+      .header__inner {
+        .logo {
+          width: 130px;
+        }
+        .nav__inner {
+          &-links {
+            position: unset;
+            flex-direction: row;
+            align-items: center;
+
+            h6 {
+              margin: 0 20px 0 0;
+            }
+          }
+          &-link {
+            &:after {
+              top: calc(100% + 0.5em);
+              left: 50%;
+              transform: translateX(-50%);
+              height: 2px;
+              width: 40%;
+            }
+
+            &:hover {
+              color: $main;
+              &:after {
+                width: 80%;
+                opacity: 1;
+              }
+            }
+          }
+          &-social {
+            &-link {
+              color: rgba($black, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @mixin header-1025 {
   .header {
-    padding: 25px 0;
+    z-index: unset;
 
     &__inner {
+      height: 95px;
+      padding: 25px 0;
       justify-content: space-between;
 
       &-logo {
@@ -253,6 +272,10 @@
         z-index: 2;
       }
     }
+
+    &.sticky {
+      z-index: 1;
+    }
   }
   .nav {
     position: fixed;
@@ -262,7 +285,7 @@
     height: 100%;
     background: rgba($black, 0.4);
     backdrop-filter: blur(4px);
-    z-index: 0;
+    z-index: 2;
     transform: translate(100%);
     opacity: 0;
     pointer-events: none;
@@ -299,6 +322,9 @@
           border: 0;
         }
       }
+      &-links {
+        position: unset;
+      }
       &-link {
         color: $black;
 
@@ -318,6 +344,11 @@
           }
         }
       }
+      &-social {
+        &-link {
+          color: $black;
+        }
+      }
     }
 
     &.active {
@@ -330,6 +361,19 @@
         opacity: 1;
         transition: 0.3s ease-in-out 0.05s;
         transform: translate(0);
+      }
+    }
+  }
+}
+
+@mixin header-768 {
+  .header {
+    &__inner {
+      min-height: unset;
+      padding: 20px 0;
+
+      .logo {
+        width: 130px;
       }
     }
   }

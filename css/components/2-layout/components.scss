@@ -58,7 +58,7 @@
     //font
     color: $white-bg;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: inherit;
     line-height: 1;
     &::placeholder {
@@ -107,7 +107,7 @@
       color: currentColor;
       padding: 0.4em;
       transition: 0.3s ease-out;
-      
+
       svg {
         display: inline-block;
         width: 1em;

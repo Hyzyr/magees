@@ -7,7 +7,7 @@
       align-items: center;
       justify-content: center;
       height: 190px;
-      width: calc(100% - 320px);
+      width: calc(100% - 360px);
       margin: 0 auto;
 
       h1 {
@@ -252,6 +252,116 @@
     }
     &-para {
       line-height: 1.4;
+    }
+  }
+}
+
+@mixin index-1025 {
+  .hero {
+    display: block;
+    &__inner {
+      &-content {
+        position: relative;
+        height: 60vh;
+
+        &-image {
+          left: 30%;
+          width: 50%;
+        }
+      }
+      &:after {
+        left: 30%;
+        width: 70%;
+      }
+    }
+  }
+}
+
+@mixin index-1025 {
+  .hero {
+    display: block;
+    &__inner {
+      &-content {
+        position: relative;
+        height: 60vh;
+
+        &-image {
+          left: 30%;
+          width: 50%;
+        }
+      }
+      &:after {
+        left: 30%;
+        width: 70%;
+      }
+    }
+  }
+}
+
+@mixin index-768 {
+  .hero {
+    display: block;
+    margin-top: 94px;
+
+    &__inner {
+      &-header {
+        position: relative;
+        width: 100%;
+        &:after {
+          position: absolute;
+          content: "";
+          display: block;
+          left: 50%;
+          top: 0;
+          width: calc(100% + 60px);
+          height: 100%;
+          background-color: $white-main;
+          transform: translateX(-50%);
+        }
+      }
+      &-content {
+        align-items: center;
+        height: unset;
+        min-height: unset;
+        padding: unset;
+        text-align: center;
+
+        &-image {
+          position: unset;
+          width: 60%;
+          transform: unset;
+          max-width: 400px;
+        }
+        &-info {
+          align-items: center;
+          order: -1;
+
+          .link {
+            align-self: center;
+          }
+        }
+        &-title {
+          padding: 25px 0;
+          position: relative;
+          width: 100%;
+
+          &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            left: 50%;
+            bottom: 0;
+            width: calc(100% + 60px);
+            height: calc(100% + 60px);
+            background-color: $white-main;
+            transform: translateX(-50%);
+            z-index: -1;
+          }
+        }
+      }
+      &:after {
+        display: none;
+      }
     }
   }
 }
