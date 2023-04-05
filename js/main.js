@@ -31,10 +31,6 @@ if (header)
 
 ///
 ///
-/// slick slider
-
-///
-///
 /// tabEvents
 const toggleBody = (isClosed) => {
   if (isClosed) {

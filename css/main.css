@@ -1210,7 +1210,7 @@ li {
   min-width: 180px;
 }
 
-.productsSlider {
+.productsSlider__inner {
   padding: 140px 0;
 }
 .productsSlider__inner-title {
@@ -1451,10 +1451,22 @@ li {
     max-width: unset;
     padding: 40px 0;
   }
+  .productsSlider__inner {
+    padding: 120px 0;
+  }
+  .reviews__inner {
+    padding: 120px 0;
+  }
+  .story__inner {
+    padding: 120px 50% 120px 0;
+  }
 }
 @media (max-width: 1025px) {
   .autoContainer {
     padding: 0 30px;
+  }
+  .sliderArrow {
+    font-size: 13px;
   }
   .header {
     z-index: unset;
@@ -1633,6 +1645,15 @@ li {
     height: unset;
     padding: 60px 0;
   }
+  .productsSlider__inner {
+    padding: 100px 0;
+  }
+  .story__inner {
+    padding: 100px 50% 100px 0;
+  }
+  .reviews__inner {
+    padding: 100px 0;
+  }
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -1644,10 +1665,22 @@ li {
   h2 {
     font-size: 36px;
   }
+  .productsSlider__inner {
+    padding: 80px 0;
+  }
+  .story__inner {
+    padding: 80px 50% 80px 0;
+  }
+  .reviews__inner {
+    padding: 80px 0;
+  }
 }
 @media (max-width: 768px) {
   .autoContainer {
     padding: 0 15px;
+  }
+  .sliderArrow {
+    font-size: 10px;
   }
   .header__inner {
     min-height: unset;
@@ -1782,10 +1815,37 @@ li {
     max-width: 600px;
     margin: 0 auto;
   }
+  .story__inner {
+    padding: 80px 0 160px 0;
+  }
+  .story__inner h4 {
+    margin-bottom: 0.8em;
+  }
+  .story__inner-image {
+    top: unset;
+    bottom: 40px;
+    -webkit-transform: unset;
+            transform: unset;
+    height: 80px;
+    width: unset;
+  }
+  .story__inner-image img {
+    height: 100%;
+    width: auto;
+  }
+  .productsSlider__inner-title {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 580px) {
   ._hideMob {
     display: none;
+  }
+  .sliderArrow {
+    font-size: 8px;
+  }
+  .sliderArrow:after {
+    width: 6em;
   }
   h1 {
     font-size: 36px;
@@ -1838,6 +1898,22 @@ li {
   }
   .hero__inner-header {
     height: 110px;
+  }
+  .subscribe__inner {
+    padding: 40px 0;
+    border-top: 1px solid rgba(226, 240, 241, 0.4);
+  }
+  .productsSlider + .productsSlider .productsSlider__inner {
+    padding-top: 30px;
+  }
+  .reviews__item {
+    font-size: 5px;
+  }
+  .reviews__item-title {
+    margin-bottom: 0.8em;
+  }
+  .reviews__item::before {
+    top: 7.5em;
   }
 }
 @media (max-width: 460px) {

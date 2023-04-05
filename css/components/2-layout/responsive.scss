@@ -14,11 +14,15 @@
   }
   @include typography-1160;
   @include footer-1160;
+  @include index-1160;
 }
 
 @media (max-width: 1025px) {
   .autoContainer {
     padding: 0 30px;
+  }
+  .sliderArrow {
+    font-size: 13px;
   }
   @include header-1025;
   @include footer-1025;
@@ -30,10 +34,14 @@
     padding: 0 25px;
   }
   @include typography-940;
+  @include index-940;
 }
 @media (max-width: 768px) {
   .autoContainer {
     padding: 0 15px;
+  }
+  .sliderArrow {
+    font-size: 10px;
   }
   @include header-768;
   @include footer-768;
@@ -42,6 +50,12 @@
 @media (max-width: 580px) {
   ._hideMob {
     display: none;
+  }
+  .sliderArrow {
+    font-size: 8px;
+    &:after {
+      width: 6em;
+    }
   }
   @include typography-580;
   @include header-580;

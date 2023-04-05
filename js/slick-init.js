@@ -13,43 +13,43 @@ if (slickSliders) {
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: 4,
-            speed: 1000,
-            autoplay: true,
+            slidesToShow: 3.4,
           },
         },
         {
-          breakpoint: 720,
+          breakpoint: 940,
           settings: {
             slidesToShow: 3,
-            speed: 1000,
-            autoplay: true,
           },
         },
         {
-          breakpoint: 590,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2.6,
-            speed: 1000,
-            autoplay: true,
           },
         },
         {
-          breakpoint: 520,
+          breakpoint: 580,
           settings: {
             slidesToShow: 2,
-            speed: 1000,
-            autoplay: true,
           },
         },
         {
-          breakpoint: 460,
+          breakpoint: 530,
           settings: {
-            slidesToShow: 2,
-            cssEase: "linear",
-            speed: 2000,
-            autoplay: true,
-            autoplaySpeed: 0,
+            slidesToShow: 1.8,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1.3,
+          },
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 1.2,
           },
         },
       ],
@@ -65,43 +65,39 @@ if (slickSliders) {
       nextArrow: $("#brandSlider .nextArrow"),
       responsive: [
         {
-          breakpoint: 1025,
+          breakpoint: 1240,
           settings: {
             slidesToShow: 2.5,
-            speed: 1000,
-            autoplay: true,
           },
         },
         {
-          breakpoint: 720,
+          breakpoint: 1025,
           settings: {
-            slidesToShow: 2,
-            speed: 1000,
-            autoplay: true,
+            slidesToShow: 2.1,
           },
         },
         {
-          breakpoint: 590,
+          breakpoint: 940,
           settings: {
-            slidesToShow: 1.6,
-            speed: 1000,
-            autoplay: true,
+            slidesToShow: 1.8,
           },
         },
         {
-          breakpoint: 520,
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1.5,
+          },
+        },
+        {
+          breakpoint: 480,
           settings: {
             slidesToShow: 1.2,
-            speed: 1000,
-            autoplay: true,
           },
         },
         {
-          breakpoint: 460,
+          breakpoint: 400,
           settings: {
             slidesToShow: 1,
-            speed: 1000,
-            autoplay: true,
           },
         },
       ],

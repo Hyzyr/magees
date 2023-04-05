@@ -124,8 +124,8 @@
   }
 }
 .productsSlider {
-  padding: 140px 0;
   &__inner {
+    padding: 140px 0;
     &-title {
       text-align: center;
       margin-bottom: 50px;
@@ -256,6 +256,24 @@
   }
 }
 
+@mixin index-1160 {
+  .productsSlider {
+    &__inner {
+      padding: 120px 0;
+    }
+  }
+  .reviews {
+    &__inner {
+      padding: 120px 0;
+    }
+  }
+  .story {
+    &__inner {
+      padding: 120px 50% 120px 0;
+    }
+  }
+}
+
 @mixin index-1025 {
   .hero {
     display: block;
@@ -281,8 +299,40 @@
       padding: 60px 0;
     }
   }
+  .productsSlider {
+    &__inner {
+      padding: 100px 0;
+    }
+  }
+  .story {
+    &__inner {
+      padding: 100px 50% 100px 0;
+    }
+  }
+  .reviews {
+    &__inner {
+      padding: 100px 0;
+    }
+  }
 }
 
+@mixin index-940 {
+  .productsSlider {
+    &__inner {
+      padding: 80px 0;
+    }
+  }
+  .story {
+    &__inner {
+      padding: 80px 50% 80px 0;
+    }
+  }
+  .reviews {
+    &__inner {
+      padding: 80px 0;
+    }
+  }
+}
 @mixin index-768 {
   .hero {
     display: block;
@@ -364,6 +414,32 @@
       }
     }
   }
+  .story {
+    &__inner {
+      padding: 80px 0 160px 0;
+      h4 {
+        margin-bottom: 0.8em;
+      }
+      &-image {
+        top: unset;
+        bottom: 40px;
+        transform: unset;
+        height: 80px;
+        width: unset;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+  .productsSlider {
+    &__inner {
+      &-title {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 @mixin index-580 {
   .hero {
@@ -371,6 +447,32 @@
     &__inner {
       &-header {
         height: 110px;
+      }
+    }
+  }
+  .subscribe {
+    &__inner {
+      padding: 40px 0;
+      border-top: 1px solid rgba($white-bg, 0.4);
+    }
+  }
+  .productsSlider {
+    & + .productsSlider {
+      .productsSlider__inner {
+        padding-top: 30px;
+      }
+    }
+  }
+  .reviews {
+    &__item {
+      font-size: 5px;
+
+      &-title {
+        margin-bottom: 0.8em;
+      }
+
+      &::before {
+        top: 7.5em;
       }
     }
   }
