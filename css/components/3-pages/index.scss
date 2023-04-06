@@ -154,6 +154,7 @@
     border: 1px solid $white-main;
     max-width: 260px;
     height: 100%;
+    transition: 0.3s ease-out;
 
     &-title {
       color: $black;
@@ -173,6 +174,13 @@
         img {
           object-fit: contain;
         }
+      }
+    }
+
+    &:hover {
+      background: $white-main;
+      .productsSlider__item-title {
+        color: $white;
       }
     }
   }

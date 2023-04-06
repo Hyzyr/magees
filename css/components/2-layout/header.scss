@@ -100,6 +100,7 @@
     }
     &-links {
       position: absolute;
+      align-items: flex-start;
       top: calc(100% + 70px);
       left: 0;
       display: flex;
@@ -130,10 +131,10 @@
         content: "";
         display: block;
         position: absolute;
-        top: 50%;
-        left: -1em;
-        height: 40%;
-        width: 2px;
+        top: calc(100%);
+        left: 0;
+        width: 20%;
+        height: 1px;
         background: rgba($main, 0.4);
         opacity: 0;
         transform: translateY(-50%);
@@ -142,7 +143,7 @@
       &:hover {
         color: $main;
         &:after {
-          height: 80%;
+          width: 95%;
           opacity: 1;
         }
       }
@@ -220,6 +221,7 @@
             position: unset;
             flex-direction: row;
             align-items: center;
+            gap: 16px;
 
             h6 {
               margin: 0 20px 0 0;
@@ -327,12 +329,14 @@
       }
       &-links {
         position: unset;
+        align-items: stretch;
+        width: 100%;
       }
       &-link {
         color: $black;
 
         &:after {
-          left: 0;
+          left: -0.6em;
           top: 50%;
           width: 2px;
           height: 80%;

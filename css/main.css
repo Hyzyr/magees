@@ -753,6 +753,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 15px;
 }
 .footer__inner-content-column h6 {
@@ -800,6 +803,7 @@ li {
   max-width: 900px;
 }
 .footer__inner-content-link {
+  position: relative;
   color: rgba(226, 240, 241, 0.8);
   font-family: #3f595b;
   font-style: normal;
@@ -808,6 +812,28 @@ li {
   line-height: 150%;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+}
+.footer__inner-content-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(100% + 0.2em);
+  left: 0;
+  width: 20%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.footer__inner-content-link:hover {
+  color: #3f595b;
+}
+.footer__inner-content-link:hover:after {
+  width: 95%;
+  opacity: 1;
 }
 .footer__inner-content-link:hover {
   color: #fff;
@@ -934,6 +960,9 @@ li {
 }
 .nav__inner-links {
   position: absolute;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   top: calc(100% + 70px);
   left: 0;
   display: -webkit-box;
@@ -971,10 +1000,10 @@ li {
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
-  left: -1em;
-  height: 40%;
-  width: 2px;
+  top: 100%;
+  left: 0;
+  width: 20%;
+  height: 1px;
   background: rgba(63, 89, 91, 0.4);
   opacity: 0;
   -webkit-transform: translateY(-50%);
@@ -986,7 +1015,7 @@ li {
   color: #3f595b;
 }
 .nav__inner-link:hover:after {
-  height: 80%;
+  width: 95%;
   opacity: 1;
 }
 
@@ -1254,6 +1283,8 @@ li {
   border: 1px solid #a9c3c6;
   max-width: 260px;
   height: 100%;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .productsSlider__item-title {
   color: #060606;
@@ -1273,6 +1304,12 @@ li {
 .productsSlider__item-image .ratioImage img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+.productsSlider__item:hover {
+  background: #a9c3c6;
+}
+.productsSlider__item:hover .productsSlider__item-title {
+  color: #fff;
 }
 
 .story {
@@ -1366,6 +1403,7 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 16px;
   }
   .header.sticky .header__inner .nav__inner-links h6 {
     margin: 0 20px 0 0;
@@ -1559,12 +1597,16 @@ li {
   }
   .nav__inner-links {
     position: unset;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    width: 100%;
   }
   .nav__inner-link {
     color: #060606;
   }
   .nav__inner-link:after {
-    left: 0;
+    left: -0.6em;
     top: 50%;
     width: 2px;
     height: 80%;
